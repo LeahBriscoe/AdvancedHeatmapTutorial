@@ -8,7 +8,7 @@ library("RColorBrewer")
 
 
 
-test <- read.csv("~/Documents/TeachingResources/SampleAnnotatedHeatmapDataNorm.csv",row.names = 1)
+test <- read.csv("~/YourPath/SampleAnnotatedHeatmapDataNorm.csv",row.names = 1)
 # control <- test[grep("Control",row.names(test)),]
 # treatment_3weeks <- test[grep("Treatment_3weeks",row.names(test)),]
 # GSM_data <- test[grep("GSM[1][0-2]",row.names(test)),]
@@ -42,7 +42,7 @@ colnames(myCols)[1] <- "Condition"
 colnames(myCols)[2] <- "Treatment Time"
 
 # for exporting pdf or jpeg etc:
-pdf(file="~/Documents/TeachingResources/AnnotatedHeatmap.pdf")  
+pdf(file="~/YourPath/AnnotatedHeatmap.pdf")  
 par(cex.main=0.8,mar=c(1,1,1,1))
 heatmap.plus(input, col=bluered(20),cexRow=1,cexCol=0.2, margins = c(20,13), main="Your Title",
              ColSideColors=myCols)
